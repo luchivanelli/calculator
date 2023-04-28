@@ -1,0 +1,28 @@
+@use 'variables';
+
+.navbar {
+    position: fixed;
+    height: 50px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0;
+    box-shadow: 1px 1px 10px #00000068;
+    padding: 10px;
+    @include variables.flexbox(space-around, center);
+
+    &__link {
+        list-style: none;
+        font-size: 18px;
+        padding: 5px 15px;
+        font-weight: 500;
+
+        &__a {
+            text-decoration: none;
+            color: variables.$color-3;
+        }
+
+        &__a-active {
+            color: variables.$color-1;
+        }
+    }
+}

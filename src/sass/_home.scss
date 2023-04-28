@@ -1,0 +1,240 @@
+@use 'variables';
+
+.homepage {
+    padding-top: 50px;
+}
+
+.home {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1053%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 250%2c 227%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c148 C 57.6%2c139 172.8%2c80.8 288%2c103 C 403.2%2c125.2 460.8%2c252.8 576%2c259 C 691.2%2c265.2 748.8%2c142.6 864%2c134 C 979.2%2c125.4 1036.8%2c228.8 1152%2c216 C 1267.2%2c203.2 1382.4%2c99.2 1440%2c70L1440 560L0 560z' fill='rgba(115%2c 102%2c 129%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c557 C 41.2%2c517.4 123.6%2c383.8 206%2c359 C 288.4%2c334.2 329.6%2c443.2 412%2c433 C 494.4%2c422.8 535.6%2c292.6 618%2c308 C 700.4%2c323.4 741.6%2c488 824%2c510 C 906.4%2c532 947.6%2c431.4 1030%2c418 C 1112.4%2c404.6 1154%2c463.4 1236%2c443 C 1318%2c422.6 1399.2%2c341.4 1440%2c316L1440 560L0 560z' fill='rgba(20%2c 24%2c 39%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1053'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    height: calc(100vh - 50px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include variables.flexbox(center,center);
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+    }
+
+    &__subtitle {
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.section1 {
+    @include variables.flexbox(center,center);
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 10px;
+    background-color: variables.$color-1;
+
+    &__a {
+        font-weight: 500;
+        padding: 5px 15px;
+        border: 2px solid variables.$color-5;
+        border-radius: 15px;
+        color: variables.$color-5;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: variables.$color-5;
+            color: variables.$color-1;
+            transition: all 0.2s;
+        }
+    }
+}
+
+.section2 {
+    background-color: variables.$color-5;
+    padding: 20px 30px;
+
+    &__h3 {
+        color: variables.$color-2;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__h3 b {
+        color: variables.$color-1;
+        letter-spacing: 1px;
+    }
+
+    &__p {
+        color: variables.$color-2;
+        text-align: justify;
+    }
+
+    &__a {
+        @include variables.flexbox(center,center);
+        text-decoration: none;
+        margin: 30px 0;
+        padding: 5px 15px;
+        border: 2px solid variables.$color-1;
+        border-radius: 15px;
+        color: variables.$color-1;
+        font-weight: 500;
+        font-size: 18px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: variables.$color-5;
+            background-color: variables.$color-1;
+            transition: all 0.2s;
+        }
+    }
+}
+
+.section3 {
+    background-color: variables.$color-3;
+    padding: 30px 10px;
+    @include variables.flexbox(center,center);
+    flex-direction: column;
+
+    &__h3 {
+        font-size: 24px;
+        color: variables.$color-5;
+        text-align: center;
+    }
+
+    &__a {
+        text-decoration: none;
+        margin: 30px 0;
+        padding: 5px 15px;
+        border: 2px solid variables.$color-5;
+        border-radius: 15px;
+        color: variables.$color-5;
+        font-weight: 500;
+        font-size: 18px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: variables.$color-3;
+            background-color: variables.$color-5;
+            transition: all 0.2s;
+        }
+    }
+
+    &__step {
+        width: 80%;
+        @include variables.flexbox(center,center);
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        &__title {
+            margin-bottom: 0;
+            font-size: 20px;
+            
+            color: variables.$color-1;
+            letter-spacing: 1px;
+        }
+
+        &__img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        &__info {
+            width: 80%;
+            text-align: justify;
+            color: variables.$color-5;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.footer {
+    background-color: variables.$color-1;
+    height: 50px;
+    margin-top: -20px;
+    @include variables.flexbox(center,center);
+
+    &__p {
+        color: variables.$color-5;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        @include variables.flexbox(space-between, center);
+        flex-direction: row;
+        padding: 0 80px;
+        
+        &__title {
+            width: 30%;
+            font-size: 44px;
+            text-align: end;
+        }
+
+        &__subtitle {
+            width: 20%;
+            text-align: start;
+        }
+    }
+
+    .section2 {
+        padding: 20px 200px;
+
+        &__a {
+            margin: 30px 80px;
+        }
+
+    }
+
+    .section3 {
+        &__step {
+            width: 70%;
+            padding: 20px;
+        }
+    }
+
+    .footer {
+        @include variables.flexbox(flex-end,center);
+
+        &__p {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        padding: 0 140px;
+        &__subtitle {
+            width: 15%;
+        }
+    }
+
+    .section2 {
+        padding: 20px 300px;
+
+        &__a {
+            margin: 30px 140px;
+        }
+    }
+
+    .section3 {
+        &__step {
+            flex-direction: row;
+            gap: 20px;
+
+            &__title {
+                width: 100px;
+                margin-top: -10px;
+            }
+
+            &__info {
+                width: 30%;
+                text-align: start;
+            }
+        }
+    }
+}

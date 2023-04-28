@@ -1,0 +1,12 @@
+@use 'variables';
+@use 'home';
+@use 'navbar';
+@use 'calculator';
+
+body {
+    margin: 0;
+}
+
+.app {
+    font-family: 'Chivo Mono', monospace;
+}
