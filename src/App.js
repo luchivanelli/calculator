@@ -10,7 +10,7 @@ const App = ()=> {
     <div className="app">
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/calculator' element={<Home/>}/>
         <Route path='/calculatorApp/*' element={<CalculatorPage/>}/>
         <Route path='*' element={<ErrorPage/>}/>
       </Routes>
