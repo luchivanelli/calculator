@@ -48,7 +48,7 @@ const Result = ({value, persons})=> {
                 return <p key={per.name} className="data__person">{per.data}</p>
             }
         })}
-        <Link to='/' className="data__back">Back</Link>
+        <Link to='/calculator' className="data__back">Back</Link>
         </div>
     )
 
