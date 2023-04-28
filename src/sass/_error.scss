@@ -1,0 +1,23 @@
+@use 'variables';
+
+.errorpage {
+    @include variables.flexbox(center,center);
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 300px;
+    margin: 0 auto;
+    background-color: variables.$color-1;
+
+    &__h1 {
+        font-size: 40px;
+        color: variables.$color-3;
+        letter-spacing: 2px;
+    }
+
+    &__p {
+        font-size: 20px;
+        color: variables.$color-5;
+        text-align: justify;
+    }
+}
+

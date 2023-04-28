@@ -7,7 +7,7 @@ import Step from "./Step"
 
 const Section3 = ()=> {
     return (
-        <div className="section3">
+        <div className="section3" id="section3">
             <h3 className="section3__h3">Its operation</h3>
             <Step
             number='1'
@@ -29,7 +29,7 @@ const Section3 = ()=> {
             img={img4}
             info="Magically, you are told how much money one person should give to the other. To finish, press the 'Back' button"
             />
-            <Link className="section3__a" to='/calculator'>Try it now!</Link>
+            <Link className="section3__a" to='/calculatorApp'>Try it now!</Link>
         </div>
     )
 }
